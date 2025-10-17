@@ -1,4 +1,4 @@
-(function($,sr){
+(function($, sr){
 
   var debounce = function (func, threshold, execAsap) {
       var timeout;
@@ -22,13 +22,7 @@
   // smartresize 
   jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
 
-})(jQuery,'smartresize');
-
-
-
-
-
-
+})(jQuery, 'smartresize');
 
 (function(){
 
@@ -36,13 +30,9 @@
 	$drawerRight = $('#drawer-right');
 	$logo = $('.logo');
 
-
-
 	///////////////////////////////
 	// SlideNav
 	///////////////////////////////
-
-
 
 	function setSlideNav(){
 		jQuery(".toggleDrawer").click(function(e){
@@ -62,8 +52,6 @@
 		})
 	}
 
-
-
 	function setHeaderBackground() {		
 		var scrollTop = jQuery(window).scrollTop(); // our current vertical position from the top	
 		
@@ -74,22 +62,40 @@
 		}
 	}
 
-
-
-
 	///////////////////////////////
 	// Initialize
 	///////////////////////////////
 
-
-	
 	setSlideNav();
 	setHeaderBackground();
-
-
 
 	jQuery(window).scroll( function() {
 	   setHeaderBackground();
 	});
 
 })();
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const form = document.getElementById('contact');
+  
+//   form.addEventListener('submit', async (e) => {
+//     e.preventDefault();
+//     const name = form.querySelector('input[name="name"]').value;
+//     const email = form.querySelector('input[name="email"]').value;
+//     const message = form.querySelector('input[name="message"]').value;
+
+//     // Example submission
+//     const response = await fetch('/api/contact', {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify({ email, message }),
+//     });
+
+//     if (response.ok) {
+//       alert('Email sent successfully!');
+//       form.reset();
+//     } else {
+//       alert('An error occurred while sending your email.');
+//     }
+//   });
+// });

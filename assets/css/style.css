@@ -381,16 +381,28 @@ p {
 	z-index: 3;
 }
 
-.about_me {
-    width: 50%;
-	height: 430px;
-	position: relative;
-    display: table;
+.about-me-row {
+	text-align: center;
+    align-items: center;
+    display: flex;
     vertical-align: middle;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 10%;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+	margin-top: 0px;
+}
+
+.about_me_text {
+    display: flex;
+	text-align: center;
+    margin-bottom: 6%;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+.about_me {
+    width: 55%;
+	padding: 5%;
 }
 
 .right {
@@ -405,7 +417,7 @@ p {
 .circle {
 	max-width: 75%;
 	padding-right: 10px;
-	border-radius: 50%;
+	border-radius: 100%;
 	filter: drop-shadow(0px 0px 70px #85cee0);
 }
 
@@ -438,6 +450,7 @@ background-image: linear-gradient(to right, rgb(138 217 230), rgb(138 217 230), 
 
 .about-me-heading {
 	padding-top: 60px;
+	padding-bottom: 0px;
 }
 
 
